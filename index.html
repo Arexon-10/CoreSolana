@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$CORE - Meme Coin</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS for styling -->
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('E97FF211-891D-435B-909F-CE38498C142A.jpg') no-repeat center center;
+            background-size: cover; /* Ensures the background image covers the entire screen */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+            background-position: center center; /* Centers the image */
+            background-repeat: no-repeat; /* Prevents repeating of the image */
+            z-index: -1;
+        }
+
+
+        /* Header Styling */
+        header {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header-content {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin: 0;
+            text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 8px #00ffff;
+            text-align: center;
+            flex: 1;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #ffd700;
+            text-decoration: none;
+            margin-left: 15px;
+            transition: color 0.3s;
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .social-links a:hover {
+            color: #ffae42;
+        }
+
+        /* Main Content Styling */
+        main {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .video-container {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            overflow: hidden;
+            width: 80%; /* Reduce width of the video container */
+            max-width: 600px; /* Set a smaller max width */
+            margin: 0 auto; /* Center the video */
+        }
+
+        iframe {
+            border: none;
+            width: 100%; /* Full width of the container */
+            height: 300px; /* Reduce height to make it smaller */
+        }
+
+
+        /* Footer Styling */
+        footer {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contract-address {
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .contract-address span {
+            color: #ffd700;
+            font-weight: bold;
+        }
+
+        /* Media Queries for Mobile View */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .social-links {
+                margin-left: 0; /* Ensures links are centered */
+                justify-content: center; /* Centers the icons */
+                margin-top: 10px;
+            }
+
+            iframe {
+                height: 250px; /* Reduces video height for smaller screens */
+            }
+
+            .video-container {
+                width: 100%; /* Make video container responsive to screen width */
+                max-width: 100%; /* Ensure it doesn't overflow the width */
+                margin: 0 10px; /* Add a bit of margin for spacing */
+            }
+
+            h1 {
+                font-size: 1.5rem; /* Reduce font size for header on smaller screens */
+            }
+
+            footer {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            iframe {
+                height: 200px; /* Further reduce video height on extra small screens */
+            }
+
+            h1 {
+                font-size: 1.2rem; /* Adjust title size on small devices */
+            }
+
+            footer {
+                font-size: 0.8rem;
+                padding: 5px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>$CORE</h1>
+            <div class="social-links">
+                <a href="https://x.com/solcore_" target="_blank"><img src="Twitter-new-logo.jpeg" alt="X"></a>
+                <a href="https://t.me/coreonsol" target="_blank"><img src="Telegram_2019_Logo.svg.png" alt="Telegram"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Rxc6pllk08o?autoplay=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="autoplay" allowfullscreen></iframe>
+        </div>
+    </main>
+
+
+  <footer>
+    <div class="contract-address">
+        <p>Contract Address: 
+            <span id="contractAddress" style="cursor: pointer; color: #ffd700; font-weight: bold;" onclick="copyToClipboard()">Crb3po4oD4NVahRQjR6fthD2Cyz3jNsz5MqPkAuUpump</span>
+        </p>
+        <p id="copyMessage" style="display: none; color: #ffd700;">Copied to clipboard!</p>
+    </div>
+  </footer>
+
+  <script>
+    function copyToClipboard() {
+        const contractAddress = document.getElementById("contractAddress").textContent;
+        navigator.clipboard.writeText(contractAddress).then(() => {
+            const copyMessage = document.getElementById("copyMessage");
+            copyMessage.style.display = "inline";
+
+            // Hide the message after 2 seconds
+            setTimeout(() => {
+                copyMessage.style.display = "none";
+            }, 2000);
+        }).catch(err => {
+            console.error('Could not copy text: ', err);
+        });
+    }
+  </script>
+
+</body>
+</html>
